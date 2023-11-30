@@ -2,6 +2,7 @@
 function ConvertToTitleCaseJS(text) {
   let returnStr = "";
   const words = text.split(" ").map((word) =>
+    // This function does not check for non-initial articles such as "a", "the" or "and" but that functionality can be added here if required
     word.replace(/([A-Z])/g, " $1").replace(/^./, function (str) {
       return str.toUpperCase();
     })
